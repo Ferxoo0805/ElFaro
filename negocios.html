@@ -93,7 +93,13 @@
       
           const articulo = document.createElement("article");
           articulo.innerHTML = "<h3>" + titulo + "</h3><p>" + contenido + "</p>";
+      
           document.getElementById("lista-articulos").appendChild(articulo);
+      
+ 
+          setTimeout(() => {
+            articulo.classList.add("animado");
+          }, 10);
       
           contador++;
           actualizarContador();
@@ -132,7 +138,7 @@
           e.preventDefault();
           alert("¡Gracias por contactarnos, " + document.getElementById("nombre").value + "!");
           this.reset();
-          this.style.display = "none"; // opcional: ocultar el formulario después del envío
+          this.style.display = "none"; 
         });
       </script>
 </body>

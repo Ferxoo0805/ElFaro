@@ -89,7 +89,13 @@
       
           const articulo = document.createElement("article");
           articulo.innerHTML = "<h3>" + titulo + "</h3><p>" + contenido + "</p>";
+      
           document.getElementById("lista-articulos").appendChild(articulo);
+      
+ 
+          setTimeout(() => {
+            articulo.classList.add("animado");
+          }, 10);
       
           contador++;
           actualizarContador();
