@@ -9,7 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>El Faro - Negocios</h1>
+        <div class="izquierda">
+            <img src="logo.png" alt="Logo de El Faro" width="150">
+            <h1>Negocios</h1>
+        </div>
+        <div id="fecha-hora" class="reloj"></div>
     </header>
     <nav>
         <ul>
@@ -22,30 +26,114 @@
         <h2>Noticias de Negocios</h2>
         <div class="grilla">
             <article>
-                <h1>Startup Revoluciona la Tecnología Sostenible con Paneles Solares Flexibles</h1>
-                <h4>Negocios / Emprendimientos / Tecnología Verde</h4>
-                <p>Una startup emergente ha logrado un avance significativo en el sector de la energía renovable con el desarrollo de paneles solares flexibles y ultraligeros, capaces de adaptarse a diversas superficies y aumentar la eficiencia energética.
-
-                    La empresa, llamada SolarFlex, ha creado una tecnología basada en nanomateriales conductores, que permite que los paneles se adhieran a techos curvos, vehículos e incluso ropa especializada para generar energía en movimiento.</p>
+                <h3>Startup Revoluciona la Tecnología Sostenible con Paneles Solares Flexibles</h3>
+                <p>Una startup emergente ha logrado un avance significativo en el sector de la energía renovable con el desarrollo de paneles solares flexibles y ultraligeros, capaces de adaptarse a diversas superficies y aumentar la eficiencia energética. La empresa, llamada SolarFlex, ha creado una tecnología basada en nanomateriales conductores, que permite que los paneles se adhieran a techos curvos, vehículos e incluso ropa especializada para generar energía en movimiento.</p>
                 </article>
                 <article>
-                <h1>El Auge de los Microemprendimientos en Comercio Electrónico</h1>
-                <h4>Emprendimiento / E-commerce / Negocios Digitales</h4>
+                <h3>El Auge de los Microemprendimientos en Comercio Electrónico</h3>
                 <p>Con el crecimiento de las plataformas de venta en línea, los microemprendedores están encontrando nuevas oportunidades para vender sus productos sin la necesidad de contar con un local físico.
 
                     Según un estudio reciente, el 60% de los nuevos negocios en 2024 se han creado en línea, utilizando herramientas como Shopify, Mercado Libre y redes sociales para vender sus productos.</p>
                 </article>
                 <article>
-                <h1>Las Criptomonedas y su Impacto en los Negocios Tradicionales</h1>
-                <h4>Finanzas / Innovación / Negocios</h4>
+                <h3>Las Criptomonedas y su Impacto en los Negocios Tradicionales</h3>
                 <p>El uso de criptomonedas en los negocios tradicionales sigue en aumento, con más empresas aceptando Bitcoin, Ethereum y monedas estables como métodos de pago.
 
                     Empresas de renombre como Tesla, Starbucks y Adidas han comenzado a explorar el uso de blockchain no solo para pagos, sino también para la autenticación de productos y contratos inteligentes.</p>
                 </article>
             </div>
+            <section class="nuevo-articulo">
+                <h2>Agregar nuevo artículo</h2>
+                <button id="mostrar-formulario" class="boton-toggle">✏️Nuevo artículo</button>
+                <form id="formulario-articulo">
+                  <input type="text" id="titulo" placeholder="Título del artículo" required>
+                  <textarea id="contenido" placeholder="Contenido del artículo" required></textarea>
+                  <button type="submit">Agregar</button>
+                </form>
+              </section>
+              <section id="seccion-articulos">
+                <h2>Artículos</h2>
+                <p id="contador-articulos">Total de artículos: 0</p>
+                <div id="lista-articulos"></div>
+              </section>
+              <section class="contacto">
+                <h2>Contacto</h2>
+                <button id="mostrar-contacto" class="boton-toggle">📬 Mostrar / Ocultar formulario</button>
+                <form id="formulario-contacto">
+                  <input type="text" id="nombre" placeholder="Tu nombre" required>
+                  <textarea id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                  <button type="submit">Enviar</button>
+                </form>
+              </section>
     </main>
     <footer>
         <p>&copy; 2025 El Faro - Todos los derechos reservados.</p>
     </footer>
+    <script>
+        function actualizarHora() {
+          const ahora = new Date();
+          const opciones = {
+            weekday: 'long', year: 'numeric', month: 'long',
+            day: 'numeric', hour: '2-digit', minute: '2-digit',
+            second: '2-digit'
+          };
+          const formato = ahora.toLocaleDateString('es-ES', opciones);
+          document.getElementById('fecha-hora').textContent = formato;
+        }
+        setInterval(actualizarHora, 1000);
+        actualizarHora();
+      </script>
+      <script>
+        let contador = 0;
+      
+        document.getElementById("formulario-articulo").addEventListener("submit", function (e) {
+          e.preventDefault();
+          const titulo = document.getElementById("titulo").value;
+          const contenido = document.getElementById("contenido").value;
+      
+          const articulo = document.createElement("article");
+          articulo.innerHTML = "<h3>" + titulo + "</h3><p>" + contenido + "</p>";
+          document.getElementById("lista-articulos").appendChild(articulo);
+      
+          contador++;
+          actualizarContador();
+      
+          this.reset();
+        });
+      
+        function actualizarContador() {
+          const contadorElemento = document.getElementById("contador-articulos");
+          if (contadorElemento) {
+            contadorElemento.textContent = "Total de artículos: " + contador;
+          }
+        }
+      </script>
+      <section class="nuevo-articulo">
+        <h2>Agregar nuevo artículo</h2>
+        <form id="formulario-articulo">
+            <input type="text" id="titulo" placeholder="Título del artículo" required>
+            <textarea id="contenido" placeholder="Contenido del artículo" required></textarea>
+            <button type="submit">Agregar Artículo</button>
+        </form>
+    </section>
+    <script>
+        document.getElementById("mostrar-formulario").addEventListener("click", function () {
+          const form = document.getElementById("formulario-articulo");
+          form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
+        });
+      </script>
+      <script>
+        document.getElementById("mostrar-contacto").addEventListener("click", function () {
+          const formContacto = document.getElementById("formulario-contacto");
+          formContacto.style.display = (formContacto.style.display === "none" || formContacto.style.display === "") ? "block" : "none";
+        });
+      
+        document.getElementById("formulario-contacto").addEventListener("submit", function(e) {
+          e.preventDefault();
+          alert("¡Gracias por contactarnos, " + document.getElementById("nombre").value + "!");
+          this.reset();
+          this.style.display = "none"; // opcional: ocultar el formulario después del envío
+        });
+      </script>
 </body>
 </html>

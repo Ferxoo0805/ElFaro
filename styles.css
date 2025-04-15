@@ -28,10 +28,10 @@ article:hover {
 header {
     background-color: #ff0000;
     color: #ffffff;
-    padding: 10px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
-   
+    justify-content: space-between;
 
 }
 footer {
@@ -76,4 +76,136 @@ th, td {
     padding: 10px;
 }
 
+.izquierda {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .reloj {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .nuevo-articulo {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .nuevo-articulo input,
+  .nuevo-articulo textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-family: inherit;
+  }
+  
+  .nuevo-articulo button {
+    padding: 8px 12px;
+    background-color: #fb0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .nuevo-articulo button:hover {
+    background-color: #000000;
+  }
+  .contacto {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contacto h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contacto input,
+  .contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  
+  .contacto button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contacto button:hover {
+    background-color: #000000;
+  }
+  #formulario-articulo {
+    display: none;
+}
+.boton-toggle {
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.boton-toggle:hover {
+    background-color: #218838;
+}
+#formulario-contacto {
+    display: none;
+}
+
+.formulario-contacto {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: inherit;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.formulario-contacto button {
+    padding: 10px 15px;
+    background-color: #fc0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: #007bff;
+}
 
