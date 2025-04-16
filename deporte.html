@@ -54,7 +54,7 @@
           </section>
           <section class="contacto">
             <h2>Contacto</h2>
-            <button id="mostrar-formulario-contacto" class="boton-toggle">✏️ Mostrar / Ocultar formulario</button>
+            <button id="mostrar-contacto" class="boton-toggle">📬 Mostrar / Ocultar formulario</button>
             <form id="formulario-contacto" style="display: none;">
               <input type="text" id="nombre" placeholder="Tu nombre" required>
               <textarea id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
@@ -119,29 +119,23 @@
         </form>
     </section>
     <script>
-        document.getElementById("mostrar-formulario").addEventListener("click", function () {
-          const form = document.getElementById("formulario-articulo");
-          form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
-        });
-      </script>
-      <script>
-        document.getElementById("mostrar-formulario-contacto").addEventListener("click", function () {
-          const formContacto = document.getElementById("formulario-contacto");
-          formContacto.style.display = (formContacto.style.display === "none" || formContacto.style.display === "") ? "block" : "none";
-        });
-      
-        document.getElementById("formulario-contacto").addEventListener("submit", function (e) {
-          e.preventDefault();
-          const nombre = document.getElementById("nombre").value;
-          const mensaje = document.getElementById("mensaje").value;
-          
-          // Aquí puedes agregar la lógica que necesites para enviar o procesar el mensaje
-          alert("¡Gracias por contactarnos, " + nombre + "!");
-          
-          this.reset();
-          // Opcional: ocultar el formulario después del envío
-          this.style.display = "none";
-        });
-      </script>
+      document.getElementById("mostrar-formulario").addEventListener("click", function () {
+        const form = document.getElementById("formulario-articulo");
+        form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
+      });
+    </script>
+    <script>
+      document.getElementById("mostrar-contacto").addEventListener("click", function () {
+        const formContacto = document.getElementById("formulario-contacto");
+        formContacto.style.display = (formContacto.style.display === "none" || formContacto.style.display === "") ? "block" : "none";
+      });
+    
+      document.getElementById("formulario-contacto").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("¡Gracias por contactarnos, " + document.getElementById("nombre").value + "!");
+        this.reset();
+        this.style.display = "none"; 
+      });
+    </script>
 </body>
 </html>

@@ -123,23 +123,23 @@
         </form>
     </section>
     <script>
-        document.getElementById("mostrar-formulario").addEventListener("click", function () {
-          const form = document.getElementById("formulario-articulo");
-          form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
-        });
-      </script>
-      <script>
-        document.getElementById("mostrar-contacto").addEventListener("click", function () {
-          const formContacto = document.getElementById("formulario-contacto");
-          formContacto.style.display = (formContacto.style.display === "none" || formContacto.style.display === "") ? "block" : "none";
-        });
-      
-        document.getElementById("formulario-contacto").addEventListener("submit", function(e) {
-          e.preventDefault();
-          alert("¡Gracias por contactarnos, " + document.getElementById("nombre").value + "!");
-          this.reset();
-          this.style.display = "none"; 
-        });
-      </script>
+      document.getElementById("mostrar-formulario").addEventListener("click", function () {
+        const form = document.getElementById("formulario-articulo");
+        form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
+      });
+    </script>
+    <script>
+      document.getElementById("mostrar-contacto").addEventListener("click", function () {
+        const formContacto = document.getElementById("formulario-contacto");
+        formContacto.style.display = (formContacto.style.display === "none" || formContacto.style.display === "") ? "block" : "none";
+      });
+    
+      document.getElementById("formulario-contacto").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("¡Gracias por contactarnos, " + document.getElementById("nombre").value + "!");
+        this.reset();
+        this.style.display = "none"; 
+      });
+    </script>
 </body>
 </html>

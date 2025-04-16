@@ -96,7 +96,6 @@ Ella fue una de los miles de socorristas que acudieron al sitio en ruinas de las
           e.preventDefault();
           const titulo = document.getElementById("titulo").value;
           const contenido = document.getElementById("contenido").value;
-      
           const articulo = document.createElement("article");
           articulo.innerHTML = "<h3>" + titulo + "</h3><p>" + contenido + "</p>";
       
@@ -128,6 +127,7 @@ Ella fue una de los miles de socorristas que acudieron al sitio en ruinas de las
           alert("Gracias por tu mensaje, " + nombre + ". ¡Lo hemos recibido!");
       
           this.reset();
+          this.style.display = "none";
         });
       </script>
       <script>
@@ -146,7 +146,7 @@ Ella fue una de los miles de socorristas que acudieron al sitio en ruinas de las
           e.preventDefault();
           alert("¡Gracias por contactarnos, " + document.getElementById("nombre").value + "!");
           this.reset();
-          this.style.display = "none"; // opcional: ocultar el formulario después del envío
+          this.style.display = "none"; 
         });
       </script>
 </body>
