@@ -1,157 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Faro - Inicio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Faro - Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="izquierda">
-            <img src="logo.png" alt="Logo de El Faro" width="150">
-            <h1>El Faro</h1>
-        </div>
-        <div id="fecha-hora" class="reloj"></div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="deporte.html">Deporte</a></li>
-            <li><a href="negocios.html">Negocios</a></li>
+
+  <!-- Sección superior de avisos -->
+  <div class="bg-warning text-center py-2">
+    <strong>Aviso:</strong> ¡Última hora! Nuevo cambio en la política deportiva nacional.
+  </div>
+
+  <!-- Navbar principal -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="El Faro" width="40"> El Faro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="deporte.html">Deportes</a></li>
+          <li class="nav-item"><a class="nav-link" href="negocios.html">Negocios</a></li>
+          <li class="nav-item"><a class="nav-link" href="tecnologia.html">Tecnología</a></li>         
         </ul>
-    </nav>
-    <main>
-        <h2>Últimas noticias</h2>
-        <div class="grilla">
-            <article>
-                <h3>Príncipe Harry acusado de acoso: Denunciante declara haber sufrido "abuso de poder y misoginia"</h3>
-                <p>El príncipe Harry de Gran Bretaña fue acusado este domingo de "intimidación y acoso" por la presidente de una organización no gubernamental que trabaja en África y que él cofundó, pero de la cual tomó distancia tras un conflicto interno.</p>
-                    <iframe width="400" height="225" src="https://www.youtube.com/embed/jPKodXz4X2g" frameborder="0" allowfullscreen></iframe>
-                </article>
-                <article>
-                <h3>Inmigrantes sin residencia permanente no podrán pedir estos préstamos | Noticias Telemundo</h3>
-                <p>A partir del 25 de mayo desaparecerán los préstamos FHA de la Administración Federal de Vivienda para personas con estatus migratorio temporal: titulares de visa de trabajo, estudiantes internacionales, dreamers, y solicitantes de asilo.</p>
-                    <iframe width="400" height="225" src="https://www.youtube.com/embed/1R7VYHPyenE" frameborder="0" allowfullscreen></iframe>
-                </article>
-                <article>
-                <h3>Cómo los atentados contra las Torres Gemelas siguen cobrando miles de vidas dos décadas después</h3>
-                <p>Todos sabíamos que la calidad del aire no era segura; era muy tóxica en términos de cómo se sentía", dice Cascio, extécnica médica de emergencia del Departamento de Bomberos de Nueva York (FDNY, por sus siglas en inglés).
+      </div>
+    </div>
+  </nav>
 
-Ella fue una de los miles de socorristas que acudieron al sitio en ruinas de las Torres Gemelas en el World Trade Center, en la ciudad de Nueva York, después de los atentados del 11 de septiembre.</p>
-    <iframe width="400" height="225" src="https://www.youtube.com/embed/cAE2vPz8RQ4" frameborder="0" allowfullscreen></iframe>
-</article>
+  <!-- Artículo destacado -->
+  <div class="container mt-4">
+    <h2 class="mb-4">Artículo Destacado</h2>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h3 class="card-title">Defensa de tripulantes del buque "Cobra" reconoce que este pudo haber colisionado a lancha Bruma</h3>
+        <p class="card-text">
+          Este martes, Alejandro Espinoza, abogado de los tripulantes del buque Cobra, reconoce la posibilidad de colisión con lancha Bruma en las costas de Coronel el pasado 30 de marzo.
+        </p>
+        <div id="mas-info" style="display: none;">
+          <p class="card-text">
+            Además, reveló que la Bruma emitió su última señal a las 03:08 horas, por lo que se presume que el naufragio habría ocurrido entre ese horario y las 03:16 horas.
+            El abogado indicó que proponen llevar al Cobra a dique seco para peritajes, costeado por la compañía.
+          </p>
+        </div>
+        <button class="btn btn-primary" onclick="mostrarMas()">Leer Más</button>
+      </div>
+    </div>
+  </div>
+  
+
+   <!-- Otros artículos -->
+<h4>Otros artículos</h4>
+<div class="row">
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Histórica protesta pesquera paraliza caleta Lo Rojas</h5>
+        <p class="card-text">Cientos de pescadores artesanales bloquearon accesos en demanda de mayor fiscalización.</p>
+        <div class="mas-info" style="display: none;">
+          <p>La manifestación inició a las 6 AM, con quema de neumáticos y barricadas en la ruta que conecta Coronel con el puerto. Exigen mayor control a la pesca ilegal y subsidios frente al alza del combustible.</p>
+        </div>
+        <button class="btn btn-outline-secondary btn-sm leer-mas">Leer Más</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Encuentran restos de lancha extraviada cerca de isla Santa María</h5>
+<p class="card-text">La Armada confirmó el hallazgo de partes metálicas compatibles con la Bruma.</p>
+<div class="mas-info" style="display: none;">
+  <p>Expertos de la Armada y el Ministerio Público indicaron que el hallazgo podría ser clave para determinar las causas del naufragio. Se enviarán muestras a Santiago para análisis periciales.</p>
 </div>
-        <h2>Audio destacado</h2>
-        <audio controls>
-            <source src="audio.mp3" type="audio/mpeg">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
-        <section class="nuevo-articulo">
-            <h2>Agregar nuevo artículo</h2>
-            <button id="mostrar-formulario" class="boton-toggle">✏️Nuevo artículo</button>
-            <form id="formulario-articulo">
-                <input type="text" id="titulo" placeholder="Título del artículo" required>
-                <textarea id="contenido" placeholder="Contenido del artículo" required></textarea>
-                <button type="submit">Agregar</button>
-            </form>
-        </section>
-          <section id="seccion-articulos">
-            <h2>Artículos</h2>
-            <p id="contador-articulos">Total de artículos: 0</p>
-            <div id="lista-articulos"></div>
-          </section>
-          <section class="contacto">
-            <h2>Contacto</h2>
-            <button id="mostrar-contacto" class="boton-toggle">📬 Mostrar / Ocultar formulario</button>
-            <form id="formulario-contacto">
-              <input type="text" id="nombre" placeholder="Tu nombre" required>
-              <textarea id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
-              <button type="submit">Enviar</button>
-            </form>
-          </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 El Faro - Todos los derechos reservados.</p>
-    </footer>
-    <script>
-        function actualizarHora() {
-          const ahora = new Date();
-          const opciones = {
-            weekday: 'long', year: 'numeric', month: 'long',
-            day: 'numeric', hour: '2-digit', minute: '2-digit',
-            second: '2-digit'
-          };
-          const formato = ahora.toLocaleDateString('es-ES', opciones);
-          document.getElementById('fecha-hora').textContent = formato;
-        }
-        setInterval(actualizarHora, 1000);
-        actualizarHora();
-      </script>
-      <script>
-        let contador = 0;
-      
-        document.getElementById("formulario-articulo").addEventListener("submit", function (e) {
-          e.preventDefault();
-          const titulo = document.getElementById("titulo").value;
-          const contenido = document.getElementById("contenido").value;
-          const articulo = document.createElement("article");
-          articulo.innerHTML = "<h3>" + titulo + "</h3><p>" + contenido + "</p>";
-      
-          document.getElementById("lista-articulos").appendChild(articulo);
-      
- 
-          setTimeout(() => {
-            articulo.classList.add("animado");
-          }, 10);
-      
-          contador++;
-          actualizarContador();
-          this.reset();
-        });
-      
-        function actualizarContador() {
-          const contadorElemento = document.getElementById("contador-articulos");
-          if (contadorElemento) {
-            contadorElemento.textContent = "Total de artículos: " + contador;
-          }
-        }
-      </script>
-      <script>
-        document.getElementById("formulario-contacto").addEventListener("submit", function (e) {
-          e.preventDefault();
-          const nombre = document.getElementById("nombre").value;
-          const mensaje = document.getElementById("mensaje").value;
-      
-          alert("Gracias por tu mensaje, " + nombre + ". ¡Lo hemos recibido!");
-      
-          this.reset();
-          this.style.display = "none";
-        });
-      </script>
-      <script>
-        document.getElementById("mostrar-formulario").addEventListener("click", function () {
-          const form = document.getElementById("formulario-articulo");
-          form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
-        });
-      </script>
-      <script>
-        document.getElementById("mostrar-contacto").addEventListener("click", function () {
-          const formContacto = document.getElementById("formulario-contacto");
-          formContacto.style.display = (formContacto.style.display === "none" || formContacto.style.display === "") ? "block" : "none";
-        });
-      
-        document.getElementById("formulario-contacto").addEventListener("submit", function(e) {
-          e.preventDefault();
-          alert("¡Gracias por contactarnos, " + document.getElementById("nombre").value + "!");
-          this.reset();
-          this.style.display = "none"; 
-        });
-      </script>
-</body>
-</html>
-    </main>
-</body>
-</html>
+        <button class="btn btn-outline-secondary btn-sm leer-mas">Leer Más</button>
+      </div>
+    </div>
+  </div>
 
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Familiares de tripulantes desaparecidos exigen respuestas</h5>
+<p class="card-text">Con velatones y pancartas, familiares se manifestaron frente a la Gobernación Marítima.</p>
+<div class="mas-info" style="display: none;">
+  <p>“No descansaremos hasta saber qué pasó”, declaró la hermana de uno de los marineros desaparecidos. Piden acelerar el proceso judicial y demandan una investigación independiente.</p>
+</div>
+        <button class="btn btn-outline-secondary btn-sm leer-mas">Leer Más</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p>&copy; 2025 El Faro - Todos los derechos reservados</p>
+      <p>Contacto: contacto@elfaro.cl | Síguenos en redes sociales</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Script para el artículo destacado
+    function mostrarMas() {
+      const info = document.getElementById("mas-info");
+      const boton = event.target;
+  
+      if (info.style.display === "none") {
+        info.style.display = "block";
+        boton.textContent = "Leer Menos";
+      } else {
+        info.style.display = "none";
+        boton.textContent = "Leer Más";
+      }
+    }
+  
+    // Script para los "Otros artículos"
+    document.addEventListener("DOMContentLoaded", function () {
+      const botones = document.querySelectorAll(".leer-mas");
+  
+      botones.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+          const info = this.previousElementSibling;
+          if (info.style.display === "none") {
+            info.style.display = "block";
+            this.textContent = "Leer Menos";
+          } else {
+            info.style.display = "none";
+            this.textContent = "Leer Más";
+          }
+        });
+      });
+    });
+  </script>
+  </body>
+  </html>
+  
+</body>
+
+
+</html>
