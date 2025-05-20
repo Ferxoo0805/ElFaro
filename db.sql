@@ -1,16 +1,13 @@
-CREATE DATABASE IF NOT EXISTS elfaro;
-USE elfaro;
+DELIMITER $$
 
-CREATE TABLE usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100),
-    email VARCHAR(100) UNIQUE,
-    password VARCHAR(255)
-);
+CREATE PROCEDURE getAllUsers()
+BEGIN
+    SELECT * FROM usuarios;
+END $$
 
-CREATE TABLE mensajes_contacto (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100),
-    email VARCHAR(100),
-    mensaje TEXT
-);
+CREATE PROCEDURE insertUser(IN nombre VARCHAR(100), IN email VARCHAR(100))
+BEGIN
+    INSERT INTO usuarios(nombre, email) VALUES(nombre, email);
+END $$
+
+DELIMITER ;

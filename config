@@ -1,0 +1,7 @@
+<?php
+return [
+    'host' => 'localhost',
+    'dbname' => 'elfaro_db', // Este nombre debe coincidir con el que creaste
+    'username' => 'root',     // Cambia si usas otro usuario
+    'password' => ''          // Agrega tu contraseña si corresponde
+];
